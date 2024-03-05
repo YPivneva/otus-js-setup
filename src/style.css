@@ -25,7 +25,7 @@ body {
   width: 50%;
   margin: 0 auto;
 }
-form {
+.form-search form {
   position: relative;
   width: 300px;
   margin: 0 auto;
