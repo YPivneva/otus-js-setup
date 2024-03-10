@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+h2 {
+  text-align: center;
+}
 .container {
   width: 1200px;
   height: 100%;
@@ -64,4 +67,9 @@ body {
 .weather-sign__img {
   width: 100px;
   margin-top: 10%;
+}
+.histoty-list {
+  list-style-type: none;
+  padding: 0px;
+  line-height: 1.5rem;
 }

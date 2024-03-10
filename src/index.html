@@ -6,33 +6,40 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container flex-row">
-      <div class="first-column">
-        <div class="form-search">
-          <form>
-            <input type="text" placeholder="Искать город..." />
-            <button type="submit"></button>
-          </form>
+    <main>
+      <h2>Прогноз погоды</h2>
+    </main>
+    <section>
+      <div class="container flex-row">
+        <div class="first-column">
+          <div class="form-search">
+            <form>
+              <input type="text" placeholder="Искать город..." />
+              <button type="submit"></button>
+            </form>
+          </div>
+          <div class="flex-row">
+            <div class="first-column">
+              <p>map</p>
+            </div>
+            <div class="second-column">
+              <img
+                class="weather-sign__img"
+                src="./img/sun.png"
+                alt="Значок погоды"
+              />
+            </div>
+          </div>
         </div>
-        <div class="flex-row">
-          <div class="first-column">
-            <p>map</p>
-          </div>
-          <div class="second-column">
-            <img
-              class="weather-sign__img"
-              src="./img/sun.png"
-              alt="Значок погоды"
-            />
-          </div>
+        <div class="second-column">
+          <h3>История</h3>
+          <ul class="histoty-list">
+            <li>Лондон</li>
+            <li>Париж</li>
+            <li>Москва</li>
+          </ul>
         </div>
       </div>
-      <div class="second-column">
-        <h3>История</h3>
-        <p>Логдон</p>
-        <p>Париж</p>
-        <p>Москва</p>
-      </div>
-    </div>
+    </section>
   </body>
 </html>
