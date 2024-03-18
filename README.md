@@ -1,0 +1,2 @@
+### Дкплой приложения Webpack на Github Pages
+[![PR Sanity Check](https://github.com/YPivneva/otus-js-setup/actions/workflows/sanity-check.yml/badge.svg)](https://github.com/YPivneva/otus-js-setup/actions/workflows/sanity-check.yml)
