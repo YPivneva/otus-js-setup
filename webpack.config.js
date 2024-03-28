@@ -2,6 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // eslint-disable-next-line
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+// eslint-disable-next-line
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+// eslint-disable-next-line
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -11,12 +15,6 @@ module.exports = {
     filename: "[name].[hash:8].js",
     clean: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html"),
-      filename: "index.html",
-    }),
-  ],
   module: {
     rules: [
       {
@@ -44,13 +42,14 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // `...`
-
-      // For `html-minifier-terser`:
-      //
-      new HtmlMinimizerPlugin(),
-    ],
+    minimizer: [new HtmlMinimizerPlugin()],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/index.html"),
+      filename: "index.html",
+    }),
+    new CssMinimizerPlugin(),
+    new TerserPlugin(),
+  ],
 };
