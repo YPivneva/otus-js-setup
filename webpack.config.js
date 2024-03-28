@@ -5,7 +5,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    patch: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "./dist"),
     filename: "[name].[hash:8].js",
     clean: true,
   },
