@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// eslint-disable-next-line
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -39,5 +41,16 @@ module.exports = {
     open: true,
     port: 3000,
     hot: true,
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // `...`
+
+      // For `html-minifier-terser`:
+      //
+      new HtmlMinimizerPlugin(),
+    ],
   },
 };
