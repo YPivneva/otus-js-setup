@@ -26,4 +26,5 @@ module.exports = {
     "no-plusplus": "off",
     "import/prefer-default-export": "off",
   },
+  ignorePatterns: ["**/dist/*.js"],
 };
