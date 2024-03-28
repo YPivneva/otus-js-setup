@@ -9,8 +9,7 @@
     "lint:fix": "prettier --write . && eslint . --fix",
     "prepare": "husky install",
     "build": "webpack",
-    "start": "webpack serve --open --mode=development",
-    "watch": "webpack --watch"
+    "start": "webpack serve --open --mode=development"
   },
   "repository": {
     "type": "git",
