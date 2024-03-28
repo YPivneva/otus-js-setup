@@ -1,10 +1,12 @@
-function component() {
-  const element = document.createElement("div");
+// webpack.config.js
+const path = require("path");
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = "Hello, webpack";
-
-  return element;
-}
-
-document.body.appendChild(component());
+module.exports = {
+  entry: {
+    main: path.resolve(__dirname, "./src/index.js"),
+  },
+  output: {
+    path: path.resolve(__dirname, "./dist"),
+    filename: "[name].bundle.js",
+  },
+};

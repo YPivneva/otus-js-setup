@@ -73,3 +73,10 @@ h2 {
   padding: 0px;
   line-height: 1.5rem;
 }
+.histoty-list li:hover {
+  cursor: pointer;
+}
+.weather-relevance {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
